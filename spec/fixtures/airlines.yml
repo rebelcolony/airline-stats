@@ -1,0 +1,49 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  wireless_internet: MyString
+  checked_bag_fee: MyString
+  weight_limit: 1
+  minor_fees: MyString
+  pets_cargo: MyString
+  pets_cabin: MyString
+  flight_change_fee: 1
+  flight_cancel_fee: 1
+  fatal_events: 1
+  fatal_event_rate: 1.5
+  miles_flown: 1
+  fleet: 1
+  reservation_number: 1
+  url: MyString
+  iata_code: MyString
+  country: MyString
+  icao_code: MyString
+  ticket_code: MyString
+  regions: MyString
+  destinations: 1
+  total_flights: 1
+
+two:
+  name: MyString
+  wireless_internet: MyString
+  checked_bag_fee: MyString
+  weight_limit: 1
+  minor_fees: MyString
+  pets_cargo: MyString
+  pets_cabin: MyString
+  flight_change_fee: 1
+  flight_cancel_fee: 1
+  fatal_events: 1
+  fatal_event_rate: 1.5
+  miles_flown: 1
+  fleet: 1
+  reservation_number: 1
+  url: MyString
+  iata_code: MyString
+  country: MyString
+  icao_code: MyString
+  ticket_code: MyString
+  regions: MyString
+  destinations: 1
+  total_flights: 1

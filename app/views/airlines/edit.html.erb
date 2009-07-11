@@ -1,0 +1,100 @@
+<h1>Editing airline</h1>
+
+<% form_for(@airline) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :wireless_internet %><br />
+    <%= f.text_field :wireless_internet %>
+  </p>
+  <p>
+    <%= f.label :checked_bag_fee %><br />
+    <%= f.text_field :checked_bag_fee %>
+  </p>
+  <p>
+    <%= f.label :weight_limit %><br />
+    <%= f.text_field :weight_limit %>
+  </p>
+  <p>
+    <%= f.label :minor_fees %><br />
+    <%= f.text_field :minor_fees %>
+  </p>
+  <p>
+    <%= f.label :pets_cargo %><br />
+    <%= f.text_field :pets_cargo %>
+  </p>
+  <p>
+    <%= f.label :pets_cabin %><br />
+    <%= f.text_field :pets_cabin %>
+  </p>
+  <p>
+    <%= f.label :flight_change_fee %><br />
+    <%= f.text_field :flight_change_fee %>
+  </p>
+  <p>
+    <%= f.label :flight_cancel_fee %><br />
+    <%= f.text_field :flight_cancel_fee %>
+  </p>
+  <p>
+    <%= f.label :fatal_events %><br />
+    <%= f.text_field :fatal_events %>
+  </p>
+  <p>
+    <%= f.label :fatal_event_rate %><br />
+    <%= f.text_field :fatal_event_rate %>
+  </p>
+  <p>
+    <%= f.label :miles_flown %><br />
+    <%= f.text_field :miles_flown %>
+  </p>
+  <p>
+    <%= f.label :fleet %><br />
+    <%= f.text_field :fleet %>
+  </p>
+  <p>
+    <%= f.label :reservation_number %><br />
+    <%= f.text_field :reservation_number %>
+  </p>
+  <p>
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
+  </p>
+  <p>
+    <%= f.label :iata_code %><br />
+    <%= f.text_field :iata_code %>
+  </p>
+  <p>
+    <%= f.label :country %><br />
+    <%= f.text_field :country %>
+  </p>
+  <p>
+    <%= f.label :icao_code %><br />
+    <%= f.text_field :icao_code %>
+  </p>
+  <p>
+    <%= f.label :ticket_code %><br />
+    <%= f.text_field :ticket_code %>
+  </p>
+  <p>
+    <%= f.label :regions %><br />
+    <%= f.text_field :regions %>
+  </p>
+  <p>
+    <%= f.label :destinations %><br />
+    <%= f.text_field :destinations %>
+  </p>
+  <p>
+    <%= f.label :total_flights %><br />
+    <%= f.text_field :total_flights %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @airline %> |
+<%= link_to 'Back', airlines_path %>
