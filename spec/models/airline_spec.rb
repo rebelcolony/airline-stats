@@ -83,6 +83,119 @@ describe Airline do
     @airline.should_not be_valid
   end
   
-  
+  it "should have a minor_fees value" do
+    @airline.minor_fees = nil
+    @airline.should_not be_valid
+  end
 
+  it "should have a pets_cabin value" do
+    @airline.pets_cabin = nil
+    @airline.should_not be_valid
+  end
+  
+  it "should have a pets_cargo value" do
+    @airline.pets_cargo = nil
+    @airline.should_not be_valid
+  end
+  
+  it "should have a flight_cancel_fee" do
+    @airline.flight_cancel_fee = nil
+    @airline.should_not be_valid
+  end
+  
+  it "should have a flight_cancel_fee thats a number" do
+    @airline.flight_cancel_fee = "a string"
+    @airline.should_not be_valid
+  end
+  
+   it "should have a flight_change_fee" do
+    @airline.flight_change_fee = nil
+    @airline.should_not be_valid
+  end
+  
+   it "should have a flight_change_fee thats a number" do
+    @airline.flight_change_fee = "a string"
+    @airline.should_not be_valid
+  end
+  
+  it "should have a fatal_events value" do
+    @airline.fatal_events = nil
+    @airline.should_not be_valid
+  end
+  
+  it "should have a fatal_events value thats a number" do
+    @airline.fatal_events = "a string"
+    @airline.should_not be_valid
+  end
+  
+   it "should have a miles_flown value" do
+    @airline.miles_flown = nil
+    @airline.should_not be_valid
+  end
+  
+  it "should have a miles_flown value thats a number" do
+    @airline.miles_flown = "a string"
+    @airline.should_not be_valid
+  end
+  
+   it "should have a fleet value" do
+    @airline.fleet = nil
+    @airline.should_not be_valid
+  end
+  
+  it "should have a fleet value thats a number" do
+    @airline.fleet = "a string"
+    @airline.should_not be_valid
+  end
+  
+  it "should have a reservation_number" do
+    @airline.reservation_number = nil
+    @airline.should_not be_valid
+  end
+  
+  it "should have a reservation_number thats a number" do
+    @airline.reservation_number = "a string"
+    @airline.should_not be_valid
+  end
+  
+  it "should have a url" do
+    @airline.url = nil
+    @airline.should_not be_valid
+  end
+  
+  it "should have a iata_code" do
+    @airline.iata_code = nil
+    @airline.should_not be_valid
+  end
+  
+    it "should have a country" do
+    @airline.country = nil
+    @airline.should_not be_valid
+  end
+  
+     it "should have a icao_code" do
+    @airline.icao_code = nil
+    @airline.should_not be_valid
+  end
+  
+    it "should have a ticket_code" do
+    @airline.ticket_code = nil
+    @airline.should_not be_valid
+  end
+  
+    it "should have a regions value" do
+    @airline.regions = nil
+    @airline.should_not be_valid
+  end
+  
+   it "should have a destinations value" do
+    @airline.destinations = nil
+    @airline.should_not be_valid
+  end
+  
+   it "should have total_flights" do
+    @airline.total_flights = nil
+    @airline.should_not be_valid
+  end
+  
 end
