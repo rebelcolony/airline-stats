@@ -37,6 +37,12 @@ h1 {
 .list-line-even{
 	background:; 
 }
+.float_right{
+  float:right;
+}
+.email {
+  margin-left:650px;
+}
 
 /*AIRLINES
 ========================================================== */
@@ -61,11 +67,17 @@ background-color: #ffe564;
   width:496px;
   
 }
+#search_box a {
+  color:grey;
+}
+#search_box a:hover {
+  color:#fff;
+}
 
 /*LINKS
 ========================================================== */
 a { 
-  color: #000; 
+  color: #333; 
 }
 a:visited { 
   color: #666; 
