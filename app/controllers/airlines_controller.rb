@@ -1,8 +1,10 @@
 class AirlinesController < ApplicationController
+  before_filter :authorize, :except => :index
+
   # GET /airlines
   # GET /airlines.xml
   def index
-    @airlines = Airline.all
+    @airlines = Airline.find(:all, :conditions => ["name LIKE ?", "%#{params[:search]}%"], :order => 'name')
 
     respond_to do |format|
       format.html # index.html.erb

@@ -5,13 +5,18 @@
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>Airlines: <%= controller.action_name %></title>
-  <%= stylesheet_link_tag 'scaffold' %>
+  <%= stylesheet_link_tag 'styles' %>
 </head>
 <body>
+  <div class="container">
+    <div id="header">
+      <h1>Airline-Stats<h1>
+    <!--END #header--></div>
+    
+    <p style="color: green"><%= flash[:notice] %></p>
+    <p style="color: red"><%= flash[:error] %></p>
 
-<p style="color: green"><%= flash[:notice] %></p>
-
-<%= yield %>
-
+    <%= yield %>
+  <!--END .container--></div>
 </body>
 </html>

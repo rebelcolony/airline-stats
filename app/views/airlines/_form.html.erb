@@ -1,0 +1,107 @@
+<% form_for(@airline) do |f| %>
+  <%= f.error_messages %>
+
+<table>
+  <tr>
+    <td>
+      <%= f.label :name %><br />
+      <%= f.text_field :name %>
+    </td>
+    <td>
+      <%= f.label :wireless_internet %><br />
+      <%= f.text_field :wireless_internet %>
+    </td>
+    <td>
+      <%= f.label :checked_bag_fee %><br />
+      <%= f.text_field :checked_bag_fee %>
+    </td>
+    <td>  
+      <%= f.label :weight_limit %><br />
+      <%= f.text_field :weight_limit %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= f.label :minor_fees %><br />
+      <%= f.text_field :minor_fees %>
+    </td>
+    <td>
+      <%= f.label :pets_cargo %><br />
+      <%= f.text_field :pets_cargo %>
+    </td>
+    <td>
+      <%= f.label :pets_cabin %><br />
+      <%= f.text_field :pets_cabin %>
+    </td>
+    <td>
+      <%= f.label :flight_change_fee %><br />
+      <%= f.text_field :flight_change_fee %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= f.label :flight_cancel_fee %><br />
+      <%= f.text_field :flight_cancel_fee %>
+    </td>
+    <td>
+      <%= f.label :fatal_events %><br />
+      <%= f.text_field :fatal_events %>
+    </td>
+    <td>
+      <%= f.label :fatal_event_rate %><br />
+      <%= f.text_field :fatal_event_rate %>
+    </td>
+    <td>
+      <%= f.label :miles_flown %><br />
+      <%= f.text_field :miles_flown %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= f.label :fleet %><br />
+      <%= f.text_field :fleet %>
+    </td>
+    <td>
+      <%= f.label :reservation_number %><br />
+      <%= f.text_field :reservation_number %>
+    </td>
+    <td>
+      <%= f.label :url %><br />
+      <%= f.text_field :url %>
+    </td>
+    <td>
+      <%= f.label :iata_code %><br />
+      <%= f.text_field :iata_code %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= f.label :country %><br />
+      <%= f.text_field :country %>
+    </td>
+    <td>
+      <%= f.label :icao_code %><br />
+      <%= f.text_field :icao_code %>
+    </td>
+    <td>
+      <%= f.label :ticket_code %><br />
+      <%= f.text_field :ticket_code %>
+    </td>
+    <td>
+      <%= f.label :regions %><br />
+      <%= f.text_field :regions %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= f.label :destinations %><br />
+      <%= f.text_field :destinations %>
+    </td>
+    <td>
+    <%= f.label :total_flights %><br />
+    <%= f.text_field :total_flights %>
+    </tr>
+  </tr>
+</table>
+  <%= f.submit 'Create' %>
+ <% end %>

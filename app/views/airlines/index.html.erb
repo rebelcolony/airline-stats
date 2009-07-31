@@ -1,62 +1,65 @@
-<h1>Listing airlines</h1>
+<div id="airline_list">
 
-<table>
+  <% form_tag airlines_path, :method => :get do %>
+    <p>
+      <%= text_field_tag :search, params[:search] %>
+      <%= submit_tag "Search", :name => nil %>
+    </p>
+  <% end -%>
+    
+<table width="1000" border="1">
   <tr>
-    <th>Name</th>
-    <th>Wireless internet</th>
-    <th>Checked bag fee</th>
-    <th>Weight limit</th>
-    <th>Minor fees</th>
-    <th>Pets cargo</th>
-    <th>Pets cabin</th>
-    <th>Flight change fee</th>
-    <th>Flight cancel fee</th>
-    <th>Fatal events</th>
-    <th>Fatal event rate</th>
-    <th>Miles flown</th>
-    <th>Fleet</th>
-    <th>Reservation number</th>
-    <th>Url</th>
-    <th>Iata code</th>
-    <th>Country</th>
-    <th>Icao code</th>
-    <th>Ticket code</th>
-    <th>Regions</th>
-    <th>Destinations</th>
-    <th>Total flights</th>
+    <th width="500">Name</th>
+    <th width="50">Country</th>
+    <th width="47">URL</th>
+    <th width="65">Number</th>
+    <th width="50">IATA</th>
+    <th width="50">ICAO</th>
+    <th width="33">Ticket Code</th>
+    <th width="38">Flight Change</th>
+    <th width="36">Flight Cancel</th>
+    <th width="33">Minor Fees</th>
+    <th width="31">Pets Cargo</th>
+    <th width="29">Pets Cabin</th>
+    <th width="26">Fleet</th>
+    <th width="66">Destinations</th>
+    <th width="51">Fatal Incidents</th>
+	  <th width="90">Fatal Event Rate</th>
+    <th width="121">Internet</th>
+    <th width="121">Miles Flown</th>
+    <th width="121">Total Flight</th>
   </tr>
 
 <% @airlines.each do |airline| %>
   <tr>
     <td><%=h airline.name %></td>
-    <td><%=h airline.wireless_internet %></td>
-    <td><%=h airline.checked_bag_fee %></td>
-    <td><%=h airline.weight_limit %></td>
+    <td><%=h airline.country %></td>
+    <td><%=h airline.url %></td>
+    <td><%=h airline.reservation_number %></td>
+    <td><%=h airline.iata_code %></td>
+    <td><%=h airline.icao_code %></td>
+    <td><%=h airline.ticket_code %></td>
+    <td><%=h airline.flight_change_fee %></td>
+    <td><%=h airline.flight_cancel_fee %></td>
     <td><%=h airline.minor_fees %></td>
     <td><%=h airline.pets_cargo %></td>
     <td><%=h airline.pets_cabin %></td>
-    <td><%=h airline.flight_change_fee %></td>
-    <td><%=h airline.flight_cancel_fee %></td>
+    <td><%=h airline.fleet %></td>
+    <td><%=h airline.destinations %></td>
     <td><%=h airline.fatal_events %></td>
     <td><%=h airline.fatal_event_rate %></td>
+    <td><%=h airline.wireless_internet %></td>
     <td><%=h airline.miles_flown %></td>
-    <td><%=h airline.fleet %></td>
-    <td><%=h airline.reservation_number %></td>
-    <td><%=h airline.url %></td>
-    <td><%=h airline.iata_code %></td>
-    <td><%=h airline.country %></td>
-    <td><%=h airline.icao_code %></td>
-    <td><%=h airline.ticket_code %></td>
-    <td><%=h airline.regions %></td>
-    <td><%=h airline.destinations %></td>
     <td><%=h airline.total_flights %></td>
-    <td><%= link_to 'Show', airline %></td>
-    <td><%= link_to 'Edit', edit_airline_path(airline) %></td>
-    <td><%= link_to 'Destroy', airline, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+    <% if admin? %>
+      <td><%= link_to 'Edit', edit_airline_path(airline) %></td>
+      <td><%= link_to 'Destroy', airline, :confirm => 'Are you sure?', :method => :delete %></td>
+    <% end -%> 
+  </tr> 
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New airline', new_airline_path %>
+</table> 
+<% if admin? %>
+  <%= link_to 'New airline', new_airline_path %>
+<% end -%>
+  
+</div>
