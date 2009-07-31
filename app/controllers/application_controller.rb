@@ -21,6 +21,6 @@ class ApplicationController < ActionController::Base
   end
   
   def admin?
-    false
+    session[:password] == "airadmin"
   end
 end
