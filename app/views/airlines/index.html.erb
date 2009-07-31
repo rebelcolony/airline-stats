@@ -1,5 +1,7 @@
 <div id="airline_list">
-
+  <div id="air_text">
+     <%= image_tag ("air_text.png", :border => 0) %>
+  </div>
   <% form_tag airlines_path, :method => :get do %>
     <p>
       <%= text_field_tag :search, params[:search] %>

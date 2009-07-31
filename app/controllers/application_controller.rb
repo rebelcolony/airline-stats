@@ -16,11 +16,12 @@ class ApplicationController < ActionController::Base
     unless admin?
       flash[:error] = "unathorized access"
       redirect_to airlines_path
-      false
+      
     end
   end
   
   def admin?
     session[:password] == "airadmin"
   end
-end
+  
+ end 

@@ -6,8 +6,14 @@ class SessionsController < ApplicationController
 
   def create
     session[:password] = params[:password]
+    if
+    session[:password] == "airadmin"
     flash[:notice] = "successfully logged in"
     redirect_to airlines_path
+    else
+		flash[:error] = "Password is incorrect, please try again"
+		redirect_to(:controller => 'sessions', :action => 'new')
+		end
   end
   
   def destroy

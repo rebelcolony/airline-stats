@@ -3,6 +3,7 @@
 body { 
   background-color: #fff; 
   color: #333; 
+  background: url(../images/body_bg.gif) repeat-x;
 }
 body, p, ol, ul, td {
   font-family: arial, helvetica, sans-serif;
@@ -20,7 +21,7 @@ h1 {
 /*CLASS
 ========================================================== */
 .container {
-  margin:0 auto;
+  margin:25px auto;
   padding:0;
   width:1100px;
 }
@@ -51,6 +52,15 @@ border-collapse:collapse;
 text-align:center;
 }
 
+tr:hover {
+background-color: #ffe564;
+}
+
+#air_text {
+  margin: 0 auto;
+  width:496px;
+  
+}
 
 /*LINKS
 ========================================================== */
