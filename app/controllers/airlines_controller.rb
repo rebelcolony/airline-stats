@@ -1,6 +1,7 @@
 class AirlinesController < ApplicationController
   before_filter :authorize, :except => :index
 
+  
   # GET /airlines
   # GET /airlines.xml
   def index
