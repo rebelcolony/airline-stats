@@ -3,35 +3,35 @@
   <% form_tag airlines_path, :method => :get do %>
     <p>
       <%= text_field_tag :search, params[:search] %>
-      <%= submit_tag "Search", :name => nil %>
+      <%= submit_tag "Search for Airline", :name => nil %>
     </p>
   <% end -%>
     
-<table width="1000" border="1">
+<table width="1050" border="1">
   <tr>
     <th width="500">Name</th>
     <th width="50">Country</th>
-    <th width="47">URL</th>
-    <th width="65">Number</th>
-    <th width="50">IATA</th>
-    <th width="50">ICAO</th>
-    <th width="33">Ticket Code</th>
-    <th width="38">Flight Change</th>
-    <th width="36">Flight Cancel</th>
-    <th width="33">Minor Fees</th>
-    <th width="31">Pets Cargo</th>
-    <th width="29">Pets Cabin</th>
-    <th width="26">Fleet</th>
-    <th width="66">Destinations</th>
-    <th width="51">Fatal Incidents</th>
-	  <th width="90">Fatal Event Rate</th>
+    <th width="100">URL</th>
+    <th width="100">Number</th>
+    <th width="100">IATA</th>
+    <th width="100">ICAO</th>
+    <th width="100">Ticket Code</th>
+    <th width="100">Flight Change</th>
+    <th width="100">Flight Cancel</th>
+    <th width="100">Minor Fees</th>
+    <th width="100">Pets Cargo</th>
+    <th width="100">Pets Cabin</th>
+    <th width="100">Fleet</th>
+    <th width="150">Destinations</th>
+    <th width="100">Fatal Incidents</th>
+	  <th width="120s">Fatal Event Rate</th>
     <th width="121">Internet</th>
     <th width="121">Miles Flown</th>
     <th width="121">Total Flight</th>
   </tr>
 
 <% @airlines.each do |airline| %>
-  <tr>
+  <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
     <td><%=h airline.name %></td>
     <td><%=h airline.country %></td>
     <td><%=h airline.url %></td>

@@ -8,7 +8,7 @@ describe AirlinesController do
 
   describe "GET index" do
     it "assigns all airlines as @airlines" do
-      Airline.stub!(:find).with(:all).and_return([mock_airline])
+      Airline.stub!(:find).with(:all, :conditions => ["name LIKE ?", "%#{params[:search]}%"], :order => 'name').and_return([mock_airline])
       get :index
       assigns[:airlines].should == [mock_airline]
     end
@@ -16,8 +16,8 @@ describe AirlinesController do
 
   describe "GET show" do
     it "assigns the requested airline as @airline" do
-      Airline.stub!(:find).with("37").and_return(mock_airline)
-      get :show, :id => "37"
+      Airline.stub!(:find).with("2").and_return(mock_airline)
+      get :show, :id => "2"
       assigns[:airline].should equal(mock_airline)
     end
   end
@@ -32,8 +32,8 @@ describe AirlinesController do
 
   describe "GET edit" do
     it "assigns the requested airline as @airline" do
-      Airline.stub!(:find).with("37").and_return(mock_airline)
-      get :edit, :id => "37"
+      Airline.stub!(:find).with("2").and_return(mock_airline)
+      get :edit, :id => "2"
       assigns[:airline].should equal(mock_airline)
     end
   end
@@ -74,9 +74,9 @@ describe AirlinesController do
 
     describe "with valid params" do
       it "updates the requested airline" do
-        Airline.should_receive(:find).with("37").and_return(mock_airline)
+        Airline.should_receive(:find).with("2").and_return(mock_airline)
         mock_airline.should_receive(:update_attributes).with({'these' => 'params'})
-        put :update, :id => "37", :airline => {:these => 'params'}
+        put :update, :id => "2", :airline => {:these => 'params'}
       end
 
       it "assigns the requested airline as @airline" do
@@ -94,9 +94,9 @@ describe AirlinesController do
 
     describe "with invalid params" do
       it "updates the requested airline" do
-        Airline.should_receive(:find).with("37").and_return(mock_airline)
+        Airline.should_receive(:find).with("2").and_return(mock_airline)
         mock_airline.should_receive(:update_attributes).with({'these' => 'params'})
-        put :update, :id => "37", :airline => {:these => 'params'}
+        put :update, :id => "2", :airline => {:these => 'params'}
       end
 
       it "assigns the airline as @airline" do
@@ -116,9 +116,9 @@ describe AirlinesController do
 
   describe "DELETE destroy" do
     it "destroys the requested airline" do
-      Airline.should_receive(:find).with("37").and_return(mock_airline)
+      Airline.should_receive(:find).with("2").and_return(mock_airline)
       mock_airline.should_receive(:destroy)
-      delete :destroy, :id => "37"
+      delete :destroy, :id => "2"
     end
 
     it "redirects to the airlines list" do
