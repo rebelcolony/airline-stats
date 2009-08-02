@@ -6,12 +6,12 @@
     <p id="search_box">
       <%= text_field_tag :search, params[:search] %>
       <%= submit_tag "Search for Airline", :name => nil %>
-      <small><%= link_to 'Show all airlines', airlines_path %><span class="email"><%= mail_to 'support@rebelcolony.com', 'Email Us' %></span></small>
+      <small><%= link_to 'Show all airlines', airlines_path %><span class="email"><%= mail_to 'support@rebelcolony.com', 'Email us' %></span></small>
     </p>
   <% end -%>
     
 <table width="1050" border="1">
-  <tr>
+  <tr class="table_header">
     <th width="500">Name</th>
     <th width="50">Country</th>
     <th width="100">URL</th>
@@ -21,6 +21,7 @@
     <th width="100">Ticket Code</th>
     <th width="100">Flight Change Fee</th>
     <th width="100">Flight Cancel Fee</th>
+    <th width="100">Excess Baggage Fee</th>
     <th width="100">Minor Fees</th>
     <th width="100">Pets Cargo Fee</th>
     <th width="100">Pets Cabin Fee</th>
@@ -44,6 +45,7 @@
     <td><%=h airline.ticket_code %></td>
     <td><%=h airline.flight_change_fee %></td>
     <td><%=h airline.flight_cancel_fee %></td>
+    <td><%=h airline.checked_bag_fee %></td>
     <td><%=h airline.minor_fees %></td>
     <td><%=h airline.pets_cargo %></td>
     <td><%=h airline.pets_cabin %></td>

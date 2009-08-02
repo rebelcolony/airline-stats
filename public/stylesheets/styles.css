@@ -37,6 +37,9 @@ h1 {
 .list-line-even{
 	background:; 
 }
+.table_header{
+  background:#CACACA;
+}
 .float_right{
   float:right;
 }
@@ -61,7 +64,9 @@ text-align:center;
 tr:hover {
 background-color: #ffe564;
 }
-
+th{
+  background-color: #CACACA;
+}
 #air_text {
   margin: 0 auto;
   width:496px;
