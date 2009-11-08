@@ -6,11 +6,11 @@
     <p id="search_box">
       <%= text_field_tag :search, params[:search] %>
       <%= submit_tag "Search for Airline", :name => nil %>
-      <small><%= link_to 'Show all airlines', airlines_path %><span class="email"><%= mail_to 'support@rebelcolony.com', 'Email us' %></span></small>
+      <small><%= link_to 'Show all airlines', airlines_path %><span class="email"><%= mail_to 'hello@rebelcolony.com', 'Email us' %></span></small>
     </p>
   <% end -%>
     
-<table width="1050" border="1">
+<table id="airlines" width="1050" border="1">
   <tr class="table_header">
     <th width="500">Name</th>
     <th width="50">Country</th>

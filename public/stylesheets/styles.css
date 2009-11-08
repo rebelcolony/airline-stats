@@ -7,7 +7,7 @@ body {
 }
 body, p, ol, ul, td {
   font-family: arial, helvetica, sans-serif;
-  font-size:   10px;
+  font-size:   12px;
   line-height: 18px;
 }
 pre {
@@ -56,17 +56,18 @@ h1 {
   width:1050px;
 }
 
-table {
+#airlines {
 border-collapse:collapse;
 text-align:center;
 }
 
-tr:hover {
+#airlines tr:hover {
 background-color: #ffe564;
 }
-th{
+#airlines th{
   background-color: #CACACA;
 }
+
 #air_text {
   margin: 0 auto;
   width:496px;

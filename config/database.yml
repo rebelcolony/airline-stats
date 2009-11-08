@@ -21,8 +21,7 @@ development:
   database: airstats_development
   pool: 5
   username: root
-  password: pussycat
-  socket: /var/run/mysqld/mysqld.sock
+  password: depassion
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -34,8 +33,8 @@ test:
   database: airstats_test
   pool: 5
   username: root
-  password: pussycat
-  socket: /var/run/mysqld/mysqld.sock
+  password: depassion
+
 
 production:
   adapter: mysql
@@ -44,5 +43,5 @@ production:
   database: airstats_production
   pool: 5
   username: root
-  password: pussycat
-  socket: /var/run/mysqld/mysqld.sock
+  password: depassion
+
