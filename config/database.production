@@ -6,4 +6,5 @@ production:
   pool: 5
   username: air
   password: pussycat
+  socket: /var/lib/mysql/mysql.sock
 
