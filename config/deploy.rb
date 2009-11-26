@@ -14,7 +14,8 @@ role :app, address
 role :db,  address, :primary => true 
 
 set :deploy_via, :remote_cache
-set :user, root
+set :deploy_to, "/var/www/html/#{application}"
+set :user, "root"
 
 # SSH Keys
 ssh_options[:keys] = %w(/Users/alastairbrunton/.ssh/rebel)
