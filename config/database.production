@@ -4,6 +4,6 @@ production:
   reconnect: false
   database: airstats_production
   pool: 5
-  username: root
-  password: depassion
+  username: air
+  password: pussycat
 
