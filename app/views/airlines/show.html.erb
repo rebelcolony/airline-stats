@@ -2,7 +2,7 @@
   <b>Name:</b>
   <%=h @airline.name %>
 </p>
-
+<%= image_tag @airline.logo.url(:thumb) %>
 <p>
   <b>Wireless internet:</b>
   <%=h @airline.wireless_internet %>

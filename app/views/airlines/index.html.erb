@@ -13,6 +13,7 @@
 <table id="airlines" width="1050" border="1">
   <tr class="table_header">
     <th width="500">Name</th>
+		<th width="500">Logo</th>
     <th width="50">Country</th>
     <th width="100">URL</th>
     <th width="100">Reservation Number</th>
@@ -37,6 +38,7 @@
 <% @airlines.each do |airline| %>
   <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
     <td><%=h airline.name %></td>
+		<td><%= image_tag airline.logo.url(:thumb) %></td>
     <td><%=h airline.country %></td>
     <td><%= auto_link(airline.url) %></td>
     <td><%=h airline.reservation_number %></td>

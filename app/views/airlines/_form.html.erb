@@ -1,12 +1,15 @@
-<% form_for(@airline) do |f| %>
+<% form_for @airline, :html => { :multipart => true } do |f| %>
   <%= f.error_messages %>
-
 <table>
   <tr>
     <td>
       <%= f.label :name %><br />
       <%= f.text_field :name %>
     </td>
+		 <td>
+	     <%= f.label :logo %><br />
+	     <%= f.file_field :logo %>
+	    </td>
     <td>
       <%= f.label :wireless_internet %><br />
       <%= f.text_field :wireless_internet %>

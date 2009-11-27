@@ -20,7 +20,7 @@ class AirlinesController < ApplicationController
 
 
   def create
-    @airline = Airline.new(params[:airline])
+    @airline = Airline.create(params[:airline])
       if @airline.save
         flash[:notice] = 'Airline was successfully created.'
         redirect_to(@airline)  
