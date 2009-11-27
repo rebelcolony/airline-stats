@@ -10,11 +10,7 @@ body, p, ol, ul, td {
   font-size:   12px;
   line-height: 18px;
 }
-pre {
-  background-color: #eee;
-  padding: 10px;
-  font-size: 11px;
-}
+
 h1 {
   display:none;
 }
@@ -32,7 +28,7 @@ h1 {
   float:right;
 }
 .list-line-odd{
-	background:#F2F2FA; 
+	background:#e2e2f5; 
 }
 .list-line-even{
 	background:; 
@@ -80,6 +76,9 @@ background-color: #ffe564;
   color:#fff;
 }
 
+tr, td {
+	padding:3px;
+}
 /*LINKS
 ========================================================== */
 a { 

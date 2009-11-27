@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090711114733) do
+ActiveRecord::Schema.define(:version => 20091127114454) do
 
   create_table "airlines", :force => true do |t|
     t.string   "name"
@@ -23,14 +23,14 @@ ActiveRecord::Schema.define(:version => 20090711114733) do
     t.integer  "flight_cancel_fee"
     t.integer  "fatal_events"
     t.float    "fatal_event_rate"
-    t.integer  "miles_flown"
+    t.integer  "year_founded"
     t.integer  "fleet"
-    t.integer  "reservation_number"
+    t.string   "reservation_number"
     t.string   "url"
     t.string   "iata_code"
     t.string   "country"
     t.string   "icao_code"
-    t.string   "ticket_code"
+    t.string   "alliance"
     t.string   "regions"
     t.integer  "destinations"
     t.integer  "total_flights"

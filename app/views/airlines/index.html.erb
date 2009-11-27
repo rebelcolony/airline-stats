@@ -15,10 +15,10 @@
     <th width="500">Name</th>
     <th width="50">Country</th>
     <th width="100">URL</th>
-    <th width="100">Number</th>
+    <th width="100">Reservation Number</th>
     <th width="100">IATA</th>
     <th width="100">ICAO</th>
-    <th width="100">Ticket Code</th>
+    <th width="100">Alliance</th>
     <th width="100">Flight Change Fee</th>
     <th width="100">Flight Cancel Fee</th>
     <th width="100">Excess Baggage Fee</th>
@@ -30,7 +30,7 @@
     <th width="100">Fatal Incidents</th>
 	  <th width="120s">Fatal Event Rate</th>
     <th width="121">Cabin Internet</th>
-    <th width="121">Total Miles Flown</th>
+    <th width="121">Year Founded</th>
     <th width="121">Total Flights</th>
   </tr>
 
@@ -42,7 +42,7 @@
     <td><%=h airline.reservation_number %></td>
     <td><%=h airline.iata_code %></td>
     <td><%=h airline.icao_code %></td>
-    <td><%=h airline.ticket_code %></td>
+    <td><%=h airline.alliance %></td>
     <td><%=h airline.flight_change_fee %></td>
     <td><%=h airline.flight_cancel_fee %></td>
     <td><%=h airline.checked_bag_fee %></td>
@@ -54,7 +54,7 @@
     <td><%=h airline.fatal_events %></td>
     <td><%=h airline.fatal_event_rate %></td>
     <td><%=h airline.wireless_internet %></td>
-    <td><%=h airline.miles_flown %></td>
+    <td><%=h airline.year_founded %></td>
     <td><%=h airline.total_flights %></td>
     <% if admin? %>
       <td><%= link_to 'Edit', edit_airline_path(airline) %></td>
@@ -68,3 +68,4 @@
 <% end -%>
   
 </div>
+		
