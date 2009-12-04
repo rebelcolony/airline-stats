@@ -15,7 +15,7 @@
     <th width="500">Name</th>
 		<th width="500">Logo</th>
     <th width="50">Country</th>
-    <th width="100">URL</th>
+   <!-- <th width="100">URL</th> -->
     <th width="100">Reservation Number</th>
     <th width="100">IATA</th>
     <th width="100">ICAO</th>
@@ -40,7 +40,7 @@
     <td><%=h airline.name %></td>
 		<td><%= image_tag airline.logo.url(:thumb) %></td>
     <td><%=h airline.country %></td>
-    <td><%= auto_link(airline.url) %></td>
+    <!--<td><%= auto_link(airline.url) %></td> -->
     <td><%=h airline.reservation_number %></td>
     <td><%=h airline.iata_code %></td>
     <td><%=h airline.icao_code %></td>

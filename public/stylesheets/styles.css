@@ -1,5 +1,10 @@
 /*UNIVERSAL
 ========================================================== */
+* {
+	padding:0;
+	margin:0;
+}
+
 body { 
   background-color: #fff; 
   color: #333; 
@@ -11,9 +16,34 @@ body, p, ol, ul, td {
   line-height: 18px;
 }
 
+div {
+	margin-top:10px;
+	margin-bottom:5px;
+}
+
 h1 {
   display:none;
 }
+
+h3 {
+	margin-top:;
+	color:grey;
+}
+
+th {
+	padding:5px;
+}
+/*FORM
+========================================================== */
+
+div.left {
+	border: grey solid 1px;
+	width:300px;
+	padding:5px;
+}
+
+
+
 /*CLASS
 ========================================================== */
 .container {
@@ -23,6 +53,10 @@ h1 {
 }
 .float_left{
   float:left;
+}
+.float_right_padding{
+  float:right;
+padding-right:280px;
 }
 .float_right{
   float:right;
@@ -41,6 +75,9 @@ h1 {
 }
 .email {
   margin-left:650px;
+}
+.clear {
+	clear:both;
 }
 
 /*AIRLINES

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091127123601) do
+ActiveRecord::Schema.define(:version => 20091204174210) do
 
   create_table "airlines", :force => true do |t|
     t.string   "name"
@@ -19,10 +19,10 @@ ActiveRecord::Schema.define(:version => 20091127123601) do
     t.string   "minor_fees"
     t.string   "pets_cargo"
     t.string   "pets_cabin"
-    t.integer  "flight_change_fee"
-    t.integer  "flight_cancel_fee"
-    t.integer  "fatal_events"
-    t.float    "fatal_event_rate"
+    t.string   "flight_change_fee"
+    t.string   "flight_cancel_fee"
+    t.string   "fatal_events"
+    t.string   "fatal_event_rate"
     t.integer  "year_founded"
     t.integer  "fleet"
     t.string   "reservation_number"
@@ -40,6 +40,18 @@ ActiveRecord::Schema.define(:version => 20091127123601) do
     t.string   "logo_content_type"
     t.integer  "logo_file_size"
     t.datetime "logo_updated_at"
+    t.string   "alliance_extra"
+    t.string   "flight_change_fee_extra"
+    t.string   "flight_cancel_fee_extra"
+    t.string   "excess_baggage_fee_extra"
+    t.string   "minor_fees_extra"
+    t.string   "pets_cargo_fee_extra"
+    t.string   "pets_cabin_fee_extra"
+    t.string   "destinations_extra"
+    t.string   "fatal_incidents_extra"
+    t.string   "fatal_event_rate_extra"
+    t.string   "cabin_internet_extra"
+    t.string   "total_flights_extra"
   end
 
 end

@@ -9,13 +9,18 @@
 </p>
 
 <p>
-  <b>Checked bag fee:</b>
+  <b>Wireless internet extra:</b>
+  <%=h @airline.cabin_internet_extra %>
+</p>
+
+<p>
+  <b>Excess baggage fee:</b>
   <%=h @airline.checked_bag_fee %>
 </p>
 
 <p>
-  <b>Weight limit:</b>
-  <%=h @airline.weight_limit %>
+  <b>Checked bag fee extra:</b>
+  <%=h @airline.excess_baggage_fee_extra %>
 </p>
 
 <p>
@@ -24,8 +29,16 @@
 </p>
 
 <p>
+  <b>Minor fees extra:</b>
+  <%=h @airline.minor_fees_extra %>
+</p>
+<p>
   <b>Pets cargo:</b>
   <%=h @airline.pets_cargo %>
+</p>
+<p>
+  <b>Pets cargo extra:</b>
+  <%=h @airline.pets_cargo_fee_extra %>
 </p>
 
 <p>
@@ -34,13 +47,25 @@
 </p>
 
 <p>
+  <b>Pets cabin extra:</b>
+  <%=h @airline.pets_cabin_fee_extra %>
+</p>
+<p>
   <b>Flight change fee:</b>
   <%=h @airline.flight_change_fee %>
+</p>
+<p>
+  <b>Flight change fee extra:</b>
+  <%=h @airline.flight_change_fee_extra %>
 </p>
 
 <p>
   <b>Flight cancel fee:</b>
   <%=h @airline.flight_cancel_fee %>
+</p>
+<p>
+  <b>Flight cancel fee extra:</b>
+  <%=h @airline.flight_cancel_fee_extra %>
 </p>
 
 <p>
@@ -48,6 +73,10 @@
   <%=h @airline.fatal_events %>
 </p>
 
+<p>
+  <b>Fatal events extra:</b>
+  <%=h @airline.fatal_event_rate_extra %>
+</p>
 <p>
   <b>Fatal event rate:</b>
   <%=h @airline.fatal_event_rate %>
@@ -94,8 +123,8 @@
 </p>
 
 <p>
-  <b>Regions:</b>
-  <%=h @airline.regions %>
+  <b>Alliance extra:</b>
+  <%=h @airline.alliance_extra %>
 </p>
 
 <p>
@@ -103,6 +132,10 @@
   <%=h @airline.destinations %>
 </p>
 
+<p>
+  <b>Destinations extra:</b>
+  <%=h @airline.destinations_extra %>
+</p>
 <p>
   <b>Total flights:</b>
   <%=h @airline.total_flights %>

@@ -1,110 +1,137 @@
 <% form_for @airline, :html => { :multipart => true } do |f| %>
-  <%= f.error_messages %>
-<table>
-  <tr>
-    <td>
-      <%= f.label :name %><br />
-      <%= f.text_field :name %>
-    </td>
-		 <td>
-	     <%= f.label :logo %><br />
-	     <%= f.file_field :logo %>
-	    </td>
-    <td>
-      <%= f.label :wireless_internet %><br />
-      <%= f.text_field :wireless_internet %>
-    </td>
-    <td>
-      <%= f.label :checked_bag_fee %><br />
-      <%= f.text_field :checked_bag_fee %>
-    </td>
-    <td>  
-      <%= f.label :weight_limit %><br />
-      <%= f.text_field :weight_limit %>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <%= f.label :minor_fees %><br />
-      <%= f.text_field :minor_fees %>
-    </td>
-    <td>
-      <%= f.label :pets_cargo %><br />
-      <%= f.text_field :pets_cargo %>
-    </td>
-    <td>
-      <%= f.label :pets_cabin %><br />
-      <%= f.text_field :pets_cabin %>
-    </td>
-    <td>
-      <%= f.label :flight_change_fee %><br />
-      <%= f.text_field :flight_change_fee %>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <%= f.label :flight_cancel_fee %><br />
-      <%= f.text_field :flight_cancel_fee %>
-    </td>
-    <td>
-      <%= f.label :fatal_events %><br />
-      <%= f.text_field :fatal_events %>
-    </td>
-    <td>
-      <%= f.label :fatal_event_rate %><br />
-      <%= f.text_field :fatal_event_rate %>
-    </td>
-    <td>
-      <%= f.label :year_founded %><br />
-      <%= f.text_field :year_founded %>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <%= f.label :fleet %><br />
-      <%= f.text_field :fleet %>
-    </td>
-    <td>
-      <%= f.label :reservation_number %><br />
-      <%= f.text_field :reservation_number %>
-    </td>
-    <td>
-      <%= f.label :url %><br />
-      <%= f.text_field :url %>
-    </td>
-    <td>
-      <%= f.label :iata_code %><br />
-      <%= f.text_field :iata_code %>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <%= f.label :country %><br />
-      <%= f.text_field :country %>
-    </td>
-    <td>
-      <%= f.label :icao_code %><br />
-      <%= f.text_field :icao_code %>
-    </td>
-    <td>
-      <%= f.label :alliance %><br />
-      <%= f.text_field :alliance %>
-    </td>
-    <td>
-      <%= f.label :regions %><br />
-      <%= f.text_field :regions %>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <%= f.label :destinations %><br />
-      <%= f.text_field :destinations %>
-    </td>
-    <td>
-    <%= f.label :total_flights %><br />
-    <%= f.text_field :total_flights %>
-    </tr>
-  </tr>
-</table>
+<%= f.error_messages %>
+<div class="float_left">
+<div class="left">
+	<h3>Name</h3>
+	<%= f.text_field :name %>		
+</div>
+
+<div class="left">
+	<h3>Logo Image</h3>
+	<%= f.file_field :logo %>
+</div>	
+
+<div class="left">
+	<h3>Cabin Internet</h3>
+	<%= f.text_field :wireless_internet %>
+	<h3>Extra Text</h3>
+	<%= f.text_field :cabin_internet_extra %>
+</div>	
+    
+<div class="left">
+	<h3>Excess Baggage Fee</h3>  
+  <%= f.text_field :checked_bag_fee %>
+	<h3>Extra Text</h3>
+  <%= f.text_field :excess_baggage_fee_extra %>
+</div>
+
+<div class="left">
+	<h3>Minor Fees</h3>  
+	<%= f.text_field :minor_fees %>
+	<h3>Extra Text</h3>
+  <%= f.text_field :minor_fees_extra %>
+</div>
+
+<div class="left">
+	<h3>Pets Cargo Fees</h3>  
+	<%= f.text_field :pets_cargo %>
+	<h3>Extra Text</h3>
+  <%= f.text_field :pets_cargo_fee_extra %>
+</div>
+
+<div class="left">
+	<h3>Pets Cabin Fees</h3>  
+	<%= f.text_field :pets_cabin %>
+	<h3>Extra Text</h3>
+	<%= f.text_field :pets_cabin_fee_extra %> 
+</div>
+
+<div class="left">
+	<h3>Flight Change Fee</h3>  
+  <%= f.text_field :flight_change_fee %>
+	<h3>Extra Text</h3>
+ 	<%= f.text_field :flight_change_fee_extra %>
+</div>
+
+<div class="left">
+	<h3>Flight Cancel Fee</h3>  
+  <%= f.text_field :flight_cancel_fee %>
+	<h3>Extra Text</h3>
+  <%= f.text_field :flight_cancel_fee_extra %>
+</div>
+
+</div>
+<div class="float_right_padding">	
+	<div class="left">
+		<h3>Fatal Events</h3>  
+	  <%= f.text_field :fatal_events %>
+		<h3>Extra Text</h3>
+	  <%= f.text_field :fatal_event_rate_extra %>
+	</div>
+	
+	<div class="left">
+		<h3>Fatal Event Rate</h3>  
+	  <%= f.text_field :fatal_event_rate %>
+		<h3>Extra Text</h3>
+	  <%= f.text_field :fatal_event_rate_extra %>
+	</div>
+	
+<div class="left">
+	<h3>Year Founded</h3>  
+  <%= f.text_field :year_founded %>
+</div>
+
+<div class="left">
+	<h3>Fleet</h3>  
+  <%= f.text_field :fleet %>
+</div>
+
+<div class="left">
+	<h3>Reservation Number</h3>  
+  <%= f.text_field :reservation_number %>
+</div>
+
+<div class="left">
+	<h3>URL</h3>  
+  <%= f.text_field :url %>
+</div>
+
+<div class="left">
+	<h3>IATA Code</h3>  
+  <%= f.text_field :iata_code %>
+</div>
+
+<div class="left">
+	<h3>Country</h3>  
+  <%= f.text_field :country %>
+</div>
+
+<div class="left">
+	<h3>ICAO Code</h3>  
+  <%= f.text_field :icao_code %>
+</div>
+
+<div class="left">
+	<h3>Alliance</h3>  
+  <%= f.text_field :alliance %>
+	<h3>Extra Text</h3>  
+	<%= f.text_field :alliance_extra %>
+</div>
+
+<div class="left">
+	<h3>Destinations</h3>  
+  <%= f.text_field :destinations %>
+	<h3>Extra Text</h3>  
+  <%= f.text_field :destinations_extra %>
+</div>
+
+<div class="left">
+	<h3>Total Flights</h3>  
+  <%= f.text_field :total_flights %>
+	<h3>Extra Text</h3>  
+  <%= f.text_field :total_flights_extra %>
+</div>
+</div>
+<div class="clear">
   <%= f.submit 'Create' %>
  <% end %>
