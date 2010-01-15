@@ -8,12 +8,13 @@
 body { 
   background-color: #fff; 
   color: #333; 
-  background: url(../images/body_bg.gif) repeat-x;
+  background: url(../images/bg_cloud.gif) repeat-x;
 }
+
 body, p, ol, ul, td {
-  font-family: arial, helvetica, sans-serif;
-  font-size:   12px;
-  line-height: 18px;
+  font-family: Lucida Grande,  arial, helvetica, sans-serif;
+  font-size:   10px;
+  line-height: 14px;
 }
 
 div {
@@ -33,6 +34,12 @@ h3 {
 th {
 	padding:5px;
 }
+
+table {
+	border-color: #cacaca;
+	border-width: 1px;
+	border-style: dashed;
+}
 /*FORM
 ========================================================== */
 
@@ -42,6 +49,10 @@ div.left {
 	padding:5px;
 }
 
+form {
+	padding-bottom: 20px
+	}
+
 
 
 /*CLASS
@@ -49,7 +60,7 @@ div.left {
 .container {
   margin:25px auto;
   padding:0;
-  width:1100px;
+  width: 1070px;
 }
 .float_left{
   float:left;
@@ -62,13 +73,12 @@ padding-right:280px;
   float:right;
 }
 .list-line-odd{
-	background:#e2e2f5; 
+	background:#deebff; 
 }
 .list-line-even{
 	background:; 
 }
 .table_header{
-  background:#CACACA;
 }
 .float_right{
   float:right;
@@ -80,6 +90,13 @@ padding-right:280px;
 	clear:both;
 }
 
+.extra {
+	display:none;
+}
+
+.bg_white {
+	background-color: white;
+	}
 /*AIRLINES
 ========================================================== */
 #airline_list {
@@ -95,15 +112,19 @@ text-align:center;
 }
 
 #airlines tr:hover {
-background-color: #ffe564;
+background-color: #f9ffb5;
 }
+
 #airlines th{
-  background-color: #CACACA;
+  font-style: normal;
+  font-weight: normal;
+  background-color: #e2e2e2;
 }
 
 #air_text {
   margin: 0 auto;
   width:496px;
+  padding-bottom: 20px;
   
 }
 #search_box a {

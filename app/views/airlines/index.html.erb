@@ -1,6 +1,6 @@
 <div id="airline_list">
   <div id="air_text">
-     <%= image_tag ("air_text.png", :border => 0) %>
+     <%= image_tag("air_text.png", :border => 0) %>
   </div>
   <% form_tag airlines_path, :method => :get do %>
     <p id="search_box">
@@ -12,8 +12,8 @@
     
 <table id="airlines" width="1050" border="1">
   <tr class="table_header">
-    <th width="500">Name</th>
-		<th width="500">Logo</th>
+    <!--<th width="500">Name</th>-->
+		<th width="500"></th>
     <th width="50">Country</th>
    <!-- <th width="100">URL</th> -->
     <th width="100">Reservation Number</th>
@@ -37,8 +37,8 @@
 
 <% @airlines.each do |airline| %>
   <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
-    <td><%=h airline.name %></td>
-		<td><%= image_tag airline.logo.url(:thumb) %></td>
+    <!-- <td><%=h airline.name %></td> -->
+		<td class="bg_white"><%= image_tag airline.logo.url(:thumb) %></td>
     <td><%=h airline.country %></td>
     <!--<td><%= auto_link(airline.url) %></td> -->
     <td><%=h airline.reservation_number %></td>
@@ -53,11 +53,38 @@
     <td><%=h airline.pets_cabin %></td>
     <td><%=h airline.fleet %></td>
     <td><%=h airline.destinations %></td>
-    <td><%=h airline.fatal_events %></td>
-    <td><%=h airline.fatal_event_rate %></td>
-    <td><%=h airline.wireless_internet %></td>
+
+		<!-- fatal_events -->
+    <td><%=h airline.fatal_events %>
+
+		<!-- fatal_event_rate -->
+    <td><%=h airline.fatal_event_rate %>
+			<a href="#fatal_event_rate" rel="facebox">more..</a>
+				<div id="fatal_event_rate" style="display:none;">
+					<%= airline.fatal_event_rate_extra %>
+				</div>
+		</td>		
+
+		<!-- cabin_internet -->
+    <td><%=h airline.wireless_internet %>
+			<a href="#wireless_internet" rel="facebox">more..</a>
+				<div id="wireless_internet" style="display:none;">
+					<%= airline.cabin_internet_extra %>
+				</div>
+		</td>		
+		
+		<!-- year_founded -->
     <td><%=h airline.year_founded %></td>
-    <td><%=h airline.total_flights %></td>
+
+		<!-- total_flights -->
+    <td><%=h airline.total_flights %>
+			<a href="#total_flights" rel="facebox">more..</a>
+				<div id="total_flights" style="display:none;">
+					<%= airline.total_flights_extra %>
+				</div>
+		</td>
+
+
     <% if admin? %>
       <td><%= link_to 'Edit', edit_airline_path(airline) %></td>
       <td><%= link_to 'Destroy', airline, :confirm => 'Are you sure?', :method => :delete %></td>

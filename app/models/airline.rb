@@ -5,5 +5,5 @@ class Airline < ActiveRecord::Base
     has_attached_file :logo, :styles => { :medium => "300x300>", :thumb => "80x80>" }
   	validates_attachment_content_type :logo,
   	                                    :content_type => ['image/jpeg', 'image/pjpeg', 
-  	                                                        'image/jpg', 'image/png']
+  	                                                        'image/jpg', 'image/png', 'image/gif']
 end
