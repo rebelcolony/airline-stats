@@ -37,37 +37,118 @@
 
 <% @airlines.each do |airline| %>
   <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+	
+		<!-- airline_name -->
     <!-- <td><%=h airline.name %></td> -->
+
+		<!-- airline_image -->		
 		<td class="bg_white"><%= image_tag airline.logo.url(:thumb) %></td>
+		
+		<!-- country -->
     <td><%=h airline.country %></td>
+
+		<!-- url -->
     <!--<td><%= auto_link(airline.url) %></td> -->
+
+		<!-- reservation -->
     <td><%=h airline.reservation_number %></td>
+
+		<!-- iata -->
     <td><%=h airline.iata_code %></td>
-    <td><%=h airline.icao_code %></td>
-    <td><%=h airline.alliance %></td>
-    <td><%=h airline.flight_change_fee %></td>
-    <td><%=h airline.flight_cancel_fee %></td>
-    <td><%=h airline.checked_bag_fee %></td>
-    <td><%=h airline.minor_fees %></td>
-    <td><%=h airline.pets_cargo %></td>
-    <td><%=h airline.pets_cabin %></td>
+
+		<!-- icao -->
+		<td><%=h airline.icao_code %></td>
+
+		<!-- alliance -->
+		<td>
+			<a href="#alliance" rel="facebox"><%=h airline.alliance %></a>
+				<div id="alliance" style="display:none;">
+					<%= airline.alliance_extra %>
+				</div>
+		</td>
+
+
+		<!-- change_fee -->
+		<td>
+			<a href="#change_fee" rel="facebox"><%=h airline.flight_change_fee %></a>
+				<div id="change_fee" style="display:none;">
+					<%= airline.flight_change_fee_extra %>
+				</div>
+		</td>
+
+
+		<!-- cancel_fee -->
+		<td>
+			<a href="#cancel_fee" rel="facebox"><%=h airline.flight_cancel_fee %></a>
+				<div id="cancel_fee" style="display:none;">
+					<%= airline.flight_cancel_fee_extra %>
+				</div>
+		</td>
+
+
+		<!-- checked_bag_fee -->
+		<td>
+			<a href="#bag_fee" rel="facebox"><%=h airline.checked_bag_fee %></a>
+				<div id="bag_fee" style="display:none;">
+					<%= airline.excess_baggage_fee_extra %>
+				</div>
+		</td>
+
+
+		<!-- minor_fees -->
+		<td>
+			<a href="#minor_fees" rel="facebox"><%=h airline.minor_fees %></a>
+				<div id="minor_fees" style="display:none;">
+					<%= airline.minor_fees_extra %>
+				</div>
+		</td>
+
+		<!-- pets_cargo -->
+		<td>
+			<a href="#pets_cargo" rel="facebox"><%=h airline.pets_cargo %></a>
+				<div id="pets_cargo" style="display:none;">
+					<%= airline.pets_cargo_fee_extra %>
+				</div>
+		</td>
+		
+		<!-- pets_cabin -->
+		<td>
+			<a href="#pets_cabin" rel="facebox"><%=h airline.pets_cabin %></a>
+				<div id="pets_cabin" style="display:none;">
+					<%= airline.pets_cabin_fee_extra %>
+				</div>
+		</td>
+		
+		<!-- fleet -->
     <td><%=h airline.fleet %></td>
-    <td><%=h airline.destinations %></td>
+
+		<!-- destinations -->
+		<td>
+			<a href="#destinations" rel="facebox"><%=h airline.destinations %></a>
+				<div id="destinations" style="display:none;">
+					<%= airline.destinations_extra %>
+				</div>
+		</td>
 
 		<!-- fatal_events -->
-    <td><%=h airline.fatal_events %>
+    <td>
+			<a href="#fatal_events" rel="facebox"><%= airline.fatal_events %></a>
+				<div id="fatal_events" style="display:none;">
+					<%= airline.fatal_incidents_extra %>
+				</div>
+		</td>
 
 		<!-- fatal_event_rate -->
-    <td><%=h airline.fatal_event_rate %>
-			<a href="#fatal_event_rate" rel="facebox">more..</a>
+    <td>
+			<a href="#fatal_event_rate" rel="facebox"><%=h airline.fatal_event_rate %></a>
 				<div id="fatal_event_rate" style="display:none;">
 					<%= airline.fatal_event_rate_extra %>
 				</div>
 		</td>		
 
 		<!-- cabin_internet -->
-    <td><%=h airline.wireless_internet %>
-			<a href="#wireless_internet" rel="facebox">more..</a>
+    <td>
+			<a href="#wireless_internet" rel="facebox"><%=h airline.wireless_internet %></a>
 				<div id="wireless_internet" style="display:none;">
 					<%= airline.cabin_internet_extra %>
 				</div>
@@ -77,8 +158,8 @@
     <td><%=h airline.year_founded %></td>
 
 		<!-- total_flights -->
-    <td><%=h airline.total_flights %>
-			<a href="#total_flights" rel="facebox">more..</a>
+    <td>
+			<a href="#total_flights" rel="facebox"><%=h airline.total_flights %></a>
 				<div id="total_flights" style="display:none;">
 					<%= airline.total_flights_extra %>
 				</div>

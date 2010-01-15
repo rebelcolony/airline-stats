@@ -7,7 +7,7 @@
 
 body { 
   background-color: #fff; 
-  color: #333; 
+  color: #333333; 
   background: url(../images/bg_cloud.gif) repeat-x;
 }
 
@@ -140,7 +140,11 @@ tr, td {
 /*LINKS
 ========================================================== */
 a { 
-  color: #333; 
+  border-bottom-color: blue; 
+  border-bottom-style: dotted; 
+  border-bottom-width: 1px; 
+  color: #333333; 
+  text-decoration: none;
 }
 a:visited { 
   color: #666; 
