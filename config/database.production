@@ -2,9 +2,9 @@ production:
   adapter: mysql
   encoding: utf8
   reconnect: false
-  database: airstats_production
+  database: airstats
   pool: 5
-  username: air
-  password: pussycat
+  username: root
+  password: Ve7arb
   socket: /var/lib/mysql/mysql.sock
 
