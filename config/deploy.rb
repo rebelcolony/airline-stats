@@ -7,7 +7,7 @@ set :scm_verbose, true
 default_run_options[:pty] = true
 
 set :branch, "master"
-set :address, "airline-stats.com"
+set :address, "airlinestats.org"
                                      
 role :web, address                   
 role :app, address                   
