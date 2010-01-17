@@ -6,7 +6,8 @@
     <p id="search_box">
       <%= text_field_tag :search, params[:search] %>
       <%= submit_tag "Search for Airline", :name => nil %>
-      <small><%= link_to 'Show all airlines', airlines_path %><span class="email"><%= mail_to 'hello@rebelcolony.com', 'Email us' %></span></small>
+      <small><%= link_to 'Show all airlines', airlines_path %>
+			<span class="email"><%= mail_to 'airlinestats@gmail.com', 'Email us' %></span></small>
     </p>
   <% end -%>
     
@@ -16,7 +17,7 @@
 		<th width="500"></th>
     <th width="50">Country</th>
    <!-- <th width="100">URL</th> -->
-    <th width="100">Reservation Number</th>
+    <th width="100">Contact</th>
     <th width="100">IATA</th>
     <th width="100">ICAO</th>
     <th width="100">Alliance</th>
@@ -50,8 +51,13 @@
 		<!-- url -->
     <!--<td><%= auto_link(airline.url) %></td> -->
 
-		<!-- reservation -->
-    <td><%=h airline.reservation_number %></td>
+		<!-- contact -->
+			<td>
+				<a href="#contact" rel="facebox"><%=h airline.contact %></a>
+					<div id="contact" style="display:none;">
+						<%= airline.contact_extra %>
+					</div>
+			</td>
 
 		<!-- iata -->
     <td><%=h airline.iata_code %></td>

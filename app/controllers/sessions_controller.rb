@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
   def create
     session[:password] = params[:password]
     if
-    session[:password] == "airadmin"
+    session[:password] == "hT78dvT"
     flash[:notice] = "successfully logged in"
     redirect_to airlines_path
     else

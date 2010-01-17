@@ -22,7 +22,7 @@ class ApplicationController < ActionController::Base
   end
   
   def admin?
-    session[:password] == "airadmin"
+    session[:password] == "hT78dvT"
   end
   
  end 

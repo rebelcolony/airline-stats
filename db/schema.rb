@@ -9,13 +9,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091204174210) do
+ActiveRecord::Schema.define(:version => 20100117171812) do
 
   create_table "airlines", :force => true do |t|
     t.string   "name"
     t.string   "wireless_internet"
     t.string   "checked_bag_fee"
-    t.integer  "weight_limit"
+    t.string   "weight_limit"
     t.string   "minor_fees"
     t.string   "pets_cargo"
     t.string   "pets_cabin"
@@ -23,17 +23,17 @@ ActiveRecord::Schema.define(:version => 20091204174210) do
     t.string   "flight_cancel_fee"
     t.string   "fatal_events"
     t.string   "fatal_event_rate"
-    t.integer  "year_founded"
-    t.integer  "fleet"
-    t.string   "reservation_number"
+    t.string   "year_founded"
+    t.string   "fleet"
+    t.string   "contact"
     t.string   "url"
     t.string   "iata_code"
     t.string   "country"
     t.string   "icao_code"
     t.string   "alliance"
     t.string   "regions"
-    t.integer  "destinations"
-    t.integer  "total_flights"
+    t.string   "destinations"
+    t.string   "total_flights"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "logo_file_name"
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(:version => 20091204174210) do
     t.string   "fatal_event_rate_extra"
     t.string   "cabin_internet_extra"
     t.string   "total_flights_extra"
+    t.text     "contact_extra"
   end
 
 end
