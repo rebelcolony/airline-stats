@@ -6,5 +6,5 @@ production:
   pool: 5
   username: root
   password: Ve7arb
-  socket: /var/lib/mysql/mysql.sock
+  socket: /var/run/mysqld/mysqld.sock
 
