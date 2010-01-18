@@ -21,6 +21,7 @@
     <th width="100">IATA</th>
     <th width="100">ICAO</th>
     <th width="100">Alliance</th>
+		<th width="100">Weight Limit</th>
     <th width="100">Flight Change Fee</th>
     <th width="100">Flight Cancel Fee</th>
     <th width="100">Excess Baggage Fee</th>
@@ -72,8 +73,15 @@
 					<%= airline.alliance_extra %>
 				</div>
 		</td>
-
-
+		
+		<!-- weight_limit -->
+		<td>
+			<a href="#weight" rel="facebox"><%=h airline.weight_limit %></a>
+				<div id="weight" style="display:none;">
+					<%= airline.weight_limit_extra %>
+				</div>
+		</td>
+		
 		<!-- change_fee -->
 		<td>
 			<a href="#change_fee" rel="facebox"><%=h airline.flight_change_fee %></a>
