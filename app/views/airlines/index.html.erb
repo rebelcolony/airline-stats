@@ -54,9 +54,9 @@
 
 		<!-- contact -->
 			<td>
-				<%= link_to airline.contact, "#contact", :class => "top_up" %>
-					<div id="contact" class="" style="display:none;">
-						<%= airline.contact_extra %>
+				<%= link_to airline.contact, "##{dom_id(airline)}_contact", :class => "top_up" %>
+					<div id="<%= dom_id(airline) %>_contact" style="display:none;">
+						<%= h airline.contact_extra %>
 					</div>
 			</td>
 
